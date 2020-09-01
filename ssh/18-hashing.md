@@ -3,11 +3,11 @@
 ## SSH
 
 1. use asymmetric encryption to share a symmetric key
-2. use the symmetric key for further communication
-3. server will use the client's public key to generate a challenge.
-4. transmit the challenge to the client for authentication
-5. client decrypt the message. it means that the client holds the private key required for a connection
-6. done
+1. use the symmetric key for further communication
+1. server will use the client's public key to generate a challenge.
+1. transmit the challenge to the client for authentication
+1. client decrypt the message. it means that the client holds the private key required for a connection
+1. done
 
 ## Why hash
 

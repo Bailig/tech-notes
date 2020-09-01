@@ -14,4 +14,4 @@ unlike symmetrical encryption, an asymmetrical encryption uses two separate keys
 ssh uses asymmetrical encryption during the key exchange algorithm
 
 1. before we initiate a secure connection, both parties generate temporary public and private keys and share their respective public keys to one another.
-2. using Diffie Hellman key exchange to generate a symmetrical encryption key. Each machine on its computer can generate this symmetric key from data from each computer without actually passing the symmetric key.
+1. using Diffie Hellman key exchange to generate a symmetrical encryption key. Each machine on its computer can generate this symmetric key from data from each computer without actually passing the symmetric key.

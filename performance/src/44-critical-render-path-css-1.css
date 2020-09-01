@@ -1,0 +1,8 @@
+body,
+h1 {
+  margin: 0;
+}
+.above-fold {
+  background-color: salmon;
+  height: 100vh;
+}

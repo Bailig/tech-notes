@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <script>
+      // render blocking and parser blocking
+      // from browser network tab, we can see the style sheet is pending
+      // the css request will be stalled
+      alert("click");
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Hi</h1>
+    <button>Click Me</button>
+    <script>
+      // render blocking and parser blocking
+      // from browser network tab, we can see the style sheet is already requested
+      alert("click");
+    </script>
+  </body>
+</html>

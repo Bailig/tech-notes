@@ -1,0 +1,62 @@
+<!-- 
+  1. above the fold loading
+  2. media attributes
+  3. less specificity
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./44-critical-render-path-css-1.css" />
+
+    <!-- 1. to do above the fold loading, don't load the unnecessary styles here -->
+    <!-- <link rel="stylesheet" href="./44-critical-render-path-css-2.css" /> -->
+
+    <!-- 2.  only when the style sheet is required (only screen and max-width: 768px), it will be fully loaded before the dom content loaded -->
+    <link
+      rel="stylesheet"
+      href="./44-critical-render-path-css-3.css"
+      media="only screen and (max-width: 768px)"
+    />
+
+    <!-- 3. if the specificity is long and completed, the performance will hurt  -->
+    <style>
+      /* bad */
+      div.above-fold h1.white-l-up {
+      }
+
+      /* good */
+      .white-l-up {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="above-fold">
+      <h1>important above the fold content</h1>
+      <h1 class="white-l-up">white only screen width <= 768px</h1>
+    </div>
+    <h1 class="below-fold">
+      below the fold content. you won't see this until after page load
+    </h1>
+    <script>
+      // 1. load the below the fold styles after page render
+      ((win) => {
+        const { document } = win;
+        const loadStylesheet = (href) => {
+          if (document.createStyleSheet) {
+            document.createStyleSheet(href);
+          } else {
+            const styleSheet = document.createElement("link");
+            styleSheet.rel = "stylesheet";
+            styleSheet.href = href;
+            document.getElementsByTagName("head")[0].appendChild(styleSheet);
+          }
+        };
+        win.addEventListener("load", () =>
+          loadStylesheet("./44-critical-render-path-css-2.css")
+        );
+      })(window);
+    </script>
+  </body>
+</html>
