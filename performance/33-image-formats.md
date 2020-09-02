@@ -38,7 +38,7 @@ pros
 
 - vector -> no quality loss when zoom in
 - smaller in size
-- customizable with css
+- customizable with CSS
 
 cons
 

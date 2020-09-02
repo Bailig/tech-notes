@@ -2,24 +2,24 @@
 
 ## CSS
 
-css is render blocking because, in order to construct the rendered tree,
-we need to wait for the cssom to complete and combine it with the dom to create the render tree.
+CSS is render blocking because, in order to construct the rendered tree,
+we need to wait for the CSSOM to complete and combine it with the DOM to create the render tree.
 
-css's render-blocking will not block dom construction, it only blocks the content from rendering until cssom is ready.
+CSS's render-blocking will not block DOM construction, it only blocks the content from rendering until CSSOM is ready.
 
 to improve the performance
 
-- in html, load style tag in the head
+- in HTML, load style tag in the head
 
-- in css, only load whatever is needed
+- in CSS, only load whatever is needed
   - above the fold loading
   - media attributes
   - less specificity
-  - ? style tag and inline style in html has better performance but hard to maintain
+  - ? style tag and inline style in HTML has better performance but hard to maintain
 
 ### Above the fold loading
 
-load css for only what user can see, above the fold. load the rest after page load.
+load CSS for only what user can see, above the fold. load the rest after page load.
 
 ```html
 <head>
@@ -43,7 +43,7 @@ window.addEventListener("load", () => loadStylesheet("./below-fold.css"));
 
 ### Media attributes
 
-by adding media attributes, the stylesheet won't need to be fully loaded before the dom content loaded.
+by adding media attributes, the stylesheet won't need to be fully loaded before the DOM content loaded.
 
 ```html
 <link
@@ -55,7 +55,7 @@ by adding media attributes, the stylesheet won't need to be fully loaded before 
 
 ### Less specificity
 
-if the specificity is long and completed, browser will need to do more work when creating cssom.
+if the specificity is long and completed, browser will need to do more work when creating CSSOM.
 
 ```css
 /* bad */

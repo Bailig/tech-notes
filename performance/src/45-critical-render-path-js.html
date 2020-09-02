@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>unnecessary color set by js</h1>
+    <button>Click</button>
+    <img
+      src="https://tse1-mm.cn.bing.net/th/id/OIP.A6u35NcO9Jemmyj2S6dtsQHaHa?pid=Api&rs=1"
+      alt="large-image"
+      width="500px"
+    />
+    <script>
+      const h1 = document.querySelector("h1");
+      h1.style.color = "olive"; // because js is executed before the render tree, this will always be olive when rendering
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () =>
+        console.log("DOM is loaded and parsed")
+      );
+      window.addEventListener("load", () =>
+        console.log("all resources finished loading")
+      );
+      console.log("script");
+    </script>
+
+    <script src="./45-critical-render-path-js-async.js" async></script>
+    <script src="./45-critical-render-path-js-defer.js" defer></script>
+    <script>
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => alert("fake long running js"));
+    </script>
+  </body>
+</html>
