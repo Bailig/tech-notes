@@ -21,7 +21,7 @@ to optimize
 
 ### Asynchronous and defer loading
 
-![async-vs-defer](http://blog.catchpoint.com/wp-content/uploads/2016/12/async-vs-defer-twitter.png)
+![async-vs-defer](./img/async-vs-defer.png)
 
 - async property
 
