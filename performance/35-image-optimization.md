@@ -9,8 +9,8 @@
 
 ## Reduce size
 
-- PNG: TinyPNG
-- JPG: JPEG optimizer
+- PNG: [TinyPNG](https://tinypng.com/)
+- JPG: [JPEG optimizer](http://jpeg-optimizer.com/)
 
 ## Simple rules
 
