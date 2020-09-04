@@ -17,6 +17,6 @@ action -> reducer -> store -> make changes
 
 action -> dispatcher -> store -> view
 
-## others
+## Others
 
 [Do I have to put all my state into Redux? Should I ever use local state?](https://redux.js.org/faq/organizing-state/#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate)
