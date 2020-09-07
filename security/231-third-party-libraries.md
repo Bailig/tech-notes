@@ -1,4 +1,4 @@
-# Third parti libraries
+# Third party libraries
 
 ```shell
 npm install -g nsp

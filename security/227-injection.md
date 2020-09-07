@@ -2,7 +2,7 @@
 
 most common type of attack.
 
-injections means injecting code into a another piece of code.
+injections means injecting code into an another piece of code.
 
 most common injection is SQL injection. for example
 
