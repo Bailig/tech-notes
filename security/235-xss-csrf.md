@@ -20,12 +20,10 @@ CSRF allows an attacker to induce users to perform actions that they do not inte
 to prevent CSRF
 
 1. in header setting Content-Security-Policy with trusted domain could. for example,
-
-```
-Content-Security-Policy: default-src 'self' *.trusted.com
-```
-
-2. set the property httpOnly and secure to true for cookies
+   ```
+   Content-Security-Policy: default-src 'self' *.trusted.com
+   ```
+1. set the property httpOnly and secure to true for cookies
    - httpOnly: prevent from the cookie being accessed by client side scripting
    - secure: ensures cookies will be sent over https
 

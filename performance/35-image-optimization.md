@@ -18,15 +18,13 @@
 - lower jpeg quality (30% - 60%)
 - resize image based on the size it will be displayed
 - use media query to display different sized images for different sized screens
-
-```css
-@media screen and (max-width: 768px) {
-  body {
-    /* the image will only be requested for this screen size */
-    background: url("./small-background.jpg");
+  ```css
+  @media screen and (max-width: 768px) {
+    body {
+      /* the image will only be requested for this screen size */
+      background: url("./small-background.jpg");
+    }
   }
-}
-```
-
+  ```
 - CDNs like [imgix](https://www.imgix.com/)
 - remove image metadata http://www.verexif.com/en/
