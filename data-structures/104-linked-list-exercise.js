@@ -1,15 +1,15 @@
 // add reverse to linked list
 
 /**
- * @typedef {object} LinkedListItem
+ * @typedef {object} ListNode
  * @property {any} value
- * @property {LinkedListItem | null} next
+ * @property {ListNode | null} next
  */
 
 class LinkedList {
   constructor(value) {
     /**
-     * @type {LinkedListItem}
+     * @type {ListNode}
      */
     this.head = {
       value: value,
