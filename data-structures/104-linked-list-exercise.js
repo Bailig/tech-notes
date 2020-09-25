@@ -1,3 +1,5 @@
+// add reverse to linked list
+
 /**
  * @typedef {object} LinkedListItem
  * @property {any} value
@@ -22,67 +24,6 @@ class LinkedList {
     this.tail.next = newTail;
     this.tail = newTail;
     this.length++;
-  }
-
-  unshift(value) {
-    const newHead = {
-      value,
-      next: this.head,
-    };
-    this.head = newHead;
-    this.length++;
-  }
-
-  findIndex(value) {
-    let i = 0;
-    let currentNode = this.head;
-    while (currentNode !== null) {
-      if (currentNode.value === value) return i;
-      i++;
-      currentNode = currentNode.next;
-    }
-  }
-
-  get(index) {
-    this._checkIndexRange(index);
-    let i = 0;
-    let currentNode = this.head;
-
-    while (i < index) {
-      i++;
-      currentNode = currentNode.next;
-    }
-
-    return currentNode;
-  }
-
-  insert(index, value) {
-    if (index === 0) {
-      this.unshift(value);
-      return;
-    }
-    this._checkIndexRange(index - 1);
-    const newNode = { value };
-    const preNode = this.get(index - 1);
-    newNode.next = preNode.next;
-    preNode.next = newNode;
-    if (newNode.next === null) {
-      this.tail = newNode;
-    }
-    this.length++;
-  }
-
-  remove(index) {
-    this._checkIndexRange(index);
-    const preNode = this.get(index - 1);
-    preNode.next = preNode.next.next;
-    if (preNode.next === null) {
-      this.tail = preNode;
-    }
-    if (index === 0) {
-      this.head = preNode;
-    }
-    this.length--;
   }
 
   reverse() {
@@ -111,10 +52,6 @@ class LinkedList {
     }
     return array;
   }
-
-  _checkIndexRange = (index) => {
-    if (index > this.length - 1) throw new Error("Index out of range");
-  };
 }
 
 let myLinkedList = new LinkedList(0);
