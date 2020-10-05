@@ -11,9 +11,6 @@
  * @property {TreeNodeData} currentNode
  */
 
-/**
- *
- */
 class TreeNode {
   constructor(value) {
     this.value = value;
