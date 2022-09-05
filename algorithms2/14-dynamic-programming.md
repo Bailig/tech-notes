@@ -12,3 +12,4 @@ Most of the time, it solves optimization questions that are mix/max questions, p
 Problems:
 
 - [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
+- [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard/)
