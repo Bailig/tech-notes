@@ -5,3 +5,4 @@
    - instead of updating top component, we can use redux to directly update the lower children to avoid unnecessary renders of parents
 1. turn on highlight updates setting of react dev tool to see what components are updated
    - use it de detect unnecessary component renders
+1. if javascript profiler is adding too much overhead, enable perf basic profs and pipe the perf utility to create flame graphs.
